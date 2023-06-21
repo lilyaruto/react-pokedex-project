@@ -1,12 +1,13 @@
 .card {
-    width: 200px;
-    height: 300px;
+    width: 190px;
+    height: 290px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    background-color: rgb(223, 223, 223);
+    border: 10px solid rgb(233, 233, 233);
+    background-color: rgb(212, 212, 212);
 }
 
 .pokemon-name {
