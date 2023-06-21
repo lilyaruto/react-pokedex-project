@@ -27,10 +27,14 @@ class Pokegame extends Component {
                 team1.push(pokemon);
             }
         });
+
+        let overallExp1 = team1.reduce((exp, card) => exp + card.base_experience, 0);
+        let overallExp2 = team2.reduce((exp, card) => exp + card.base_experience, 0);
+        
         return(
             <>
-                <Pokedex pokemons={team1}/>
-                <Pokedex pokemons={team2}/>
+                <Pokedex pokemons={team1} allExp={overallExp1} isWinner={overallExp1 > overallExp2 ? true : false}/>
+                <Pokedex pokemons={team2} allExp={overallExp2} isWinner={overallExp2 > overallExp1 ? true : false}/>
             </>
         );
     }
